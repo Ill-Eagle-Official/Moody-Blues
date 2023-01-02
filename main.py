@@ -10,8 +10,8 @@ client = discord.Client(intents=intents)
 async def on_message(message):
     print("Message received: ", message.content)
     print("Channel: ", message.channel)
-    if message.content.startswith == "!move":
-        print("message sent")
+    if message.content == "!move":
+        print(type(message.channel))
         try:
             await message.channel.send("Moving out!")
         except Exception as e:
